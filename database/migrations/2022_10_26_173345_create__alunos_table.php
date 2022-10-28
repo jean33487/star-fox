@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('RA');
             $table->string('senha');
             $table->string('cpf');
+            $table->string('cep');
             $table->timestamps();
         });
     }
