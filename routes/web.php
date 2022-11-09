@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+use App\Http\Controllers\Cordenacao;
+use App\Http\Controllers\Aluno;
+use App\Http\Controllers\Adm;
+use App\Http\Controllers\Professor;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -27,4 +32,8 @@ Route::get('/cordenação', function () {
 
 Route::get('/professores', function () {
     return view('professores');
+});
+
+Route::get('/area_do_aluno/{id}', function ($id = null) {
+    return view('area_do_aluno',[id => $id]);
 });
