@@ -37,3 +37,11 @@ Route::get('/professores', function () {
 Route::get('/area_do_aluno/{id}', function ($id = null) {
     return view('area_do_aluno',[id => $id]);
 });
+
+Route::get('/area_do_professor/{id}', function ($id = null) {
+    return view('area_do_professor',[id => $id]);
+});
+
+Route::get('/area_da_cordenação/{id}', function ($id = null) {
+    return view('area_da_cordenação',[id => $id]);
+});
