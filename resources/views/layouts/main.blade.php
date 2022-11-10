@@ -23,7 +23,7 @@
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="collapse navbar-collapse" id="navbar">
                     <a href="/" class="navbar-brand">
-                    <img src="/img/Logo.png" alt="Star Fox Cursos">
+                    <img src="/img/Fox_Spirit_SSBU.webp" alt="Star Fox Cursos">
                     </a>
                     <ul class="navbar-nav">
                         <li class="nav-item">

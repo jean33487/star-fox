@@ -3,6 +3,16 @@
 }
 
 #navbar img {
-    width: 300px;
+    width: 100px;
     height: 100px;
+}
+#navbar{
+    background-color: black;
+}
+
+#navbar a{
+    color: blanchedalmond;
+}
+body{
+    background-color: rgb(0, 0, 0);
 }
