@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+use App\Http\Controllers\EventController;
+
+Route::get('/',[EventController::class, 'index']);
+Route::get('/areadoaluno/login',[EventController::class, 'createAL']);
+Route::get('/areadoprofessor/login',[EventController::class, 'createPROF']);
+Route::get('/areadasecretaria/login',[EventController::class, 'createSEC']);
+
