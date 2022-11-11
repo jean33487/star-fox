@@ -13,10 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-use App\Http\Controllers\EventController;
+use App\Http\Controllers\PaginaInicialController;
+Route::get('/',[PaginaInicialController::class, 'index']);
 
-Route::get('/',[EventController::class, 'index']);
-Route::get('/areadoaluno/login',[EventController::class, 'createAL']);
-Route::get('/areadoprofessor/login',[EventController::class, 'createPROF']);
-Route::get('/areadasecretaria/login',[EventController::class, 'createSEC']);
+use App\Http\Controllers\AlunoLoginController;
+Route::get('/areadoaluno/login',[AlunoLoginController::class, 'index']);
+
+use App\Http\Controllers\ProfessorLoginController;
+Route::get('/areadoprofessor/login',[ProfessorLoginController::class, 'index']);
+
+use App\Http\Controllers\SecretariaLoginController;
+Route::get('/areadasecretaria/login',[SecretariaLoginController::class, 'index']);
+
+
 
