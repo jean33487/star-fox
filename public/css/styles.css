@@ -3,7 +3,7 @@
 }
 
 #navbar{
-    background-color: #0BEDDE;
+    background-color: #000706;
     color: #fff;
 }
 #navbar img {
@@ -12,5 +12,5 @@
 }
 
 #navbar a{
-    color: #000;
+    color: rgb(255, 255, 255);
 }
