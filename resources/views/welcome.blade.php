@@ -5,4 +5,5 @@
 @section('content')
     <h1>tela inicila para escolher quem vc é ;professor aluno ou da cordenação</h1>
 
+
 @endsection

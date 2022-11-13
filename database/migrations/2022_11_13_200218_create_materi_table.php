@@ -13,26 +13,19 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('_alunos', function (Blueprint $table) {
+        Schema::create('materi', function (Blueprint $table) {
             $table->id();
-            $table->string('nome');
-            $table->string('filme');
-            $table->string('RA');
-            $table->string('senha');
-            $table->string('cpf');
-            $table->string('cep');
             $table->timestamps();
         });
     }
 
     /**
      * Reverse the migrations.
-     * 
      *
      * @return void
      */
     public function down()
     {
-        Schema::dropIfExists('_alunos');
+        Schema::dropIfExists('materi');
     }
 };

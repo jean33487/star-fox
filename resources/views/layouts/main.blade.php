@@ -20,15 +20,12 @@
                      
                         <a href="/" class="navbar-brand">
                         
-                            <img src="/img/STAR-FOX.png" alt="Star-Fox Company"> 
+                            <img src="/img/Starfox__3__Logo.png" alt="Star-Fox Company"> 
 
                         </a>  
 
                         <ul class="navbar-nav">
 
-                            <li class="nav-item">
-                                <a href="/" class="nav-link">Pagina Inicicial</a>
-                            </li>
 
                             <li class="nav-item">
                                 <a href="/alunos" class="nav-link">Area do Aluno</a>
@@ -39,7 +36,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a href="/cordenação" class="nav-link">Area da Cordenacao</a>
+                                <a href="/cordenação" class="nav-link">Area da Coordenação</a>
                             </li>
 
                         </ul>

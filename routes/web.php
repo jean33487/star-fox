@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+use App\Http\Controllers\AlunoCoontroller;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -21,7 +23,16 @@ Route::get('/alunos', function () {
     return view('alunos');
 });
 
+//Route::get('/alunos', [AlunoCoontroller::class, 'index']);
+
+Route::get('/area_do_aluno/{id}', [AlunoCoontroller::class, 'index'] );
+
 Route::get('/prefessores', function () {
+    return view('professores');
+
+});
+
+Route::get('/area_do_prefessores/{id}', function () {
     return view('professores');
 
 });

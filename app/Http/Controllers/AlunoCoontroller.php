@@ -12,12 +12,9 @@ class AlunoCoontroller extends Controller
     {
         $alunos = Aluno::all();
 
-        return view('alunos',['alunos' => $aluno]);
+        return view('area_do_aluno',['alunos' => $alunos]);
     }
 
-    public function create()
-    {
-        return view('alunos.create');
-    }
+
 
 }
