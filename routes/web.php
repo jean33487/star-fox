@@ -17,6 +17,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/alunos', function () {
+    return view('alunos');
+});
+
+Route::get('/prefessores', function () {
+    return view('professores');
+
+});
+
+Route::get('/coredenação', function () {
+    return view('cordenação');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
