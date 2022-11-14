@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id('id');
             $table->string('nome');
             $table->string('email');
-            //$table->string('RA');
+            $table->string('RA');
             $talbe->string('CPF');
             $table->string('CEP');
             $table->string('Filme');

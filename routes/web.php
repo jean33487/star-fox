@@ -12,33 +12,41 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*iniciando o use dos controllers*/
 use App\Http\Controllers\AlunoCoontroller;
 
+use App\Http\Controllers\ProfessorController;
+
+/* rota da pagina inicial */
 Route::get('/', function () {
     return view('welcome');
 });
 
+/* rota da pagina de login do aluno */
 Route::get('/alunos', function () {
     return view('alunos');
 });
 
-//Route::get('/alunos', [AlunoCoontroller::class, 'index']);
-
+/* rota da pagina logada do aluno */
 Route::get('/area_do_aluno/{id}', [AlunoCoontroller::class, 'index'] );
 
+/* rota da pagina de login do professor */
 Route::get('/prefessores', function () {
-    return view('professores');
+    return view('professor');
 
 });
 
-Route::get('/area_do_prefessores/{id}', function () {
-    return view('professores');
+/* rota da pagina logada do professor */
+Route::get('/area_do_professor/{id}', [ProfessorController::class, 'index'] );
 
-});
-
+/* rota da pagina de login da cordenação */
 Route::get('/coredenação', function () {
     return view('cordenação');
+});
+
+/* rota da pagina logada da cordenação */
+Route::get('/area_da_cordenação/{id}', function () {
+    return view('area_da_cordenação');
 });
 
 Route::get('/dashboard', function () {

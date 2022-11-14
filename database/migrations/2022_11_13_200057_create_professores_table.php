@@ -17,8 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('RP');
             $table->string('senha');
-            $table->string('cpf');
-            $table->string('cep');
+            $table->string('CPF');
+            $table->string('CEP');
+            $table->string('email');
             $table->timestamps();
         });
     }
