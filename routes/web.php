@@ -31,7 +31,7 @@ Route::get('/alunos', function () {
 Route::get('/area_do_aluno/{id}', [AlunoCoontroller::class, 'index'] );
 
 /* rota da pagina de login do professor */
-Route::get('/prefessores', function () {
+Route::get('/professores', function () {
     return view('professor');
 
 });
@@ -40,13 +40,13 @@ Route::get('/prefessores', function () {
 Route::get('/area_do_professor/{id}', [ProfessorController::class, 'index'] );
 
 /* rota da pagina de login da cordenação */
-Route::get('/coredenação', function () {
-    return view('cordenação');
+Route::get('/coordenação', function () {
+    return view('coordenação');
 });
 
 /* rota da pagina logada da cordenação */
-Route::get('/area_da_cordenação/{id}', function () {
-    return view('area_da_cordenação');
+Route::get('/area_da_coordenação/{id}', function () {
+    return view('area_da_coordenação');
 });
 
 Route::get('/dashboard', function () {

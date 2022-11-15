@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('nome');
             $table->string('email');
             $table->string('RA');
-            $talbe->string('CPF');
+            $table->string('CPF');
             $table->string('CEP');
             $table->string('Filme');
             $table->timestamps();

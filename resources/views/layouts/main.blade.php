@@ -36,7 +36,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a href="/cordenação" class="nav-link">Area da Coordenação</a>
+                                <a href="/coordenação" class="nav-link">Area da Coordenação</a>
                             </li>
 
                         </ul>
