@@ -28,15 +28,15 @@
 
 
                             <li class="nav-item">
-                                <a href="/alunos" class="nav-link">Area do Aluno</a>
+                                <a href="/login" class="nav-link">Área do Aluno</a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="/professores" class="nav-link">Area do Professor</a>
+                                <a href="/login" class="nav-link">Área do Professor</a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="/coordenação" class="nav-link">Area da Coordenação</a>
+                                <a href="/login" class="nav-link">Área da Coordenação</a>
                             </li>
 
                         </ul>
