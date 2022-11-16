@@ -3,8 +3,8 @@
 @section('title', 'Star-Fox Company')
 
 @section('content')
-    <h1>tela inicila para escolher quem vc é ;professor aluno ou da cordenação</h1>
-    <p>para retornar a essa pagina em qualquer lugar é só clicar no logo</p>
+    <h1>Tela inicial de seleção de usuário (Aluno; Professor; Coordenação)</h1>
+    <p>Para retornar a esta página, basta clicar na Logo</p>
 
 
 @endsection

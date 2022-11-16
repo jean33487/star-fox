@@ -3,7 +3,7 @@
 @section('title', 'Area do Professor')
 
 @section('content')
-    <h1>tela que vai mostra as informações dos alunos e tem a opção de auterar a senha essa tela vai aparecer depois da tela de alunos </h1>
+    <h1>Tela que mostrará as informações dos professores, também com a opção de alterar a senha. Essa tela aparecerá depois da tela de professores.</h1>
 
     @foreach ($professores as $professor)
     <p>ID: {{ $professor->RA }}</p>

@@ -48,7 +48,7 @@
             @yield('content')
 
             <footer>
-                <p>Star-Fox  school &copy; 2022</p>
+                <p>Star-Fox Company &copy; 2022</p>
             </footer>
         </body>
 </html>

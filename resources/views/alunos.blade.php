@@ -3,7 +3,7 @@
 @section('title', 'Star-Fox Company')
 
 @section('content')
-    <h1>tela onde o aluno vai inserri os dados para acessar seu cadastro</h1>
+    <h1>Tela na qual os alunos irão inserir dados para acessarem seus cadastros.</h1>
 
 
 

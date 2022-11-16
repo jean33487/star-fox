@@ -3,6 +3,6 @@
 @section('title', 'Star-Fox Company')
 
 @section('content')
-    <h1>tela da coordenação aqui deve aparecer uma opicção de procurar curso(clicando em um curso ele vai ter acesso para configurar ele) e criar alunos profesorres </h1>
+    <h1>Tela da coordenação, aqui deverá aparecer uma opção para procurar cursos (clicando em um curso, a coordenação terá acesso para o configurar), além da criação de registros de alunos e professores </h1>
 
 @endsection
