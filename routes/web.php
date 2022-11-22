@@ -49,6 +49,14 @@ Route::get('/area_da_coordenação/{id}', function () {
     return view('area_da_coordenação');
 });
 
+/* rota para a pagina de criar nova materia */
+Route::get('/Criar_nova_materia', function () {
+    return view('Criar_nova_materia');
+});
+
+Route::post ('/events', [MateriaController::class, 'store'] );
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
