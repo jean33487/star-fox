@@ -14,6 +14,6 @@ class MateriaController extends Controller
         $materia->descrição = $request->descrição;
         $materia->tempo = $request->tempo;
         $materia->save();
-        return redirect('/area_da_coordenação/{id}');
+        return redirect('/area_da_coordenação/{1}');
     }
 }

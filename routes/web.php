@@ -54,7 +54,7 @@ Route::get('/Criar_nova_materia', function () {
     return view('Criar_nova_materia');
 });
 
-Route::post ('/events', [MateriaController::class, 'store'] );
+Route::post('/Criar_nova_materia', [MateriaController::class, 'store'] );
 
 
 Route::get('/dashboard', function () {

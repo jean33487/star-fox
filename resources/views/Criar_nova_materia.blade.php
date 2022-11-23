@@ -5,8 +5,8 @@
 
 <h1>Crie um Curso</h1>
 
-<form action="/events" method="POSTS">
-
+<form action="/Criar_nova_materia" method="POST">
+@csrf
     <div class="from-group">
     
             <label for="title">Nome do Curso:</label>
@@ -24,12 +24,19 @@
     <div class="from-group">
     
     <label for="title">Descrição:</label>
-    <input type="text" class="form-control" id="conteudo " name="conteudo" placeholder="Conteudo do Curso">
+    <textarea name="descrição" id="descrição" class="form-control" placeholder="descreva um pouco esse curso"></textarea>
+
+    <div class="from-group">
+    
+        <label for="title">Duração:</label>
+        <input type="text" class="form-control" id="tempo" name="tempo" placeholder="Tempo de duração">
 
     </div>
+
+    <input type="submit" class="btn btm-primary" valeu="Criar Curso">
 
 </form>
 
 </div>
 
-<a href="/area_da_coordenação" class="button">VOLTA</a>
+<a href="/coordemação" class="button">VOLTA</a>
