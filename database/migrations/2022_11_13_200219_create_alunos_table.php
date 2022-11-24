@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('alunos', function (Blueprint $table) {
             $table->id('id');
+            $table->foreignId('materi_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->string('nome');
             $table->string('email');
             $table->string('RA');
