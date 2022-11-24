@@ -1,11 +1,10 @@
-
 <h1>Crie um novo Curso</h1>
 
 <div id="materia-create-container" class="col-md-6 offset-md-3">
 
 <h1>Crie um Curso</h1>
 
-<form action="/Criar_nova_materia" method="POST">
+<form action="/criar_nova_materia" method="POST">
 @csrf
     <div class="from-group">
     
@@ -39,4 +38,4 @@
 
 </div>
 
-<a href="/coordemação" class="button">VOLTA</a>
+<a href="/coordenação" class="button">VOLTA</a>

@@ -6,7 +6,7 @@
     <h1>Essa é a Área Logada da Coordenação. Aqui, ela poderá criar Cursos, Alunos e realizar a adminstração geral.</h1>
 
     
-    <a href="/Criar_nova_materia" class="button">Nova Materia</a>
+    <a href="/criar_nova_materia" class="button">Novo Curso</a>
 
 
 

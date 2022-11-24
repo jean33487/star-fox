@@ -4,16 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Materia;
+
 class MateriaController extends Controller
 {
     public function store(Request $request)
     {
-        $materia = new Materia();
-        $materia->nome = $request->nome;
-        $materia->conteudo = $request->conteudo;
-        $materia->descrição = $request->descrição;
-        $materia->tempo = $request->tempo;
-        $materia->save();
-        return redirect('/area_da_coordenação/{1}');
+        $materi = new Materia();
+        $materi->nome = $request->nome;
+        $materi->conteudo = $request->conteudo;
+        $materi->descrição = $request->descrição;
+        $materi->tempo = $request->tempo;
+        $materi->save();
+        return redirect('/area_da_coordenação/1');
     }
 }
