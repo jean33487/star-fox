@@ -28,7 +28,7 @@
 
 
                             <li class="nav-item">
-                                <a href="/alunos" class="nav-link">Area do Aluno</a>
+                                <a href="/login" class="nav-link">Area do Aluno</a>
                             </li>
 
                             <li class="nav-item">
