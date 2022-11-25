@@ -44,9 +44,6 @@ Route::group(['prefix'=>'user', 'middleware' =>['isUser','auth']], function(){
 
 
 
-
-
-
 /* rota da pagina de login do aluno */
 Route::get('/alunos', function () {
     return view('alunos');

@@ -50,11 +50,15 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'NomeCompleto' => ['required', 'string', 'max:255'],
-            'Email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'UsuarioOficial' =>'required',
             'FilmeFavorito' => 'required',
-            'EnderecoDaMoradia' =>'required',
+            'cep' =>'required',
+            'rua' =>'required',
+            'bairro' =>'required',
+            'uf' =>'required',
+            'casa' =>'required',
             'CPF' =>'required',
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -69,12 +73,16 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'NomeCompleto' => $data['NomeCompleto'],
-            'Email' => $data['Email'],
+            'name' => $data['name'],
+            'email' => $data['email'],
             'role'=>2,
             'UsuarioOficial'=>$data['UsuarioOficial'],
             'FilmeFavorito'=>$data['FilmeFavorito'],
-            'EnderecoDaMoradia'=>$data['EnderecoDaMoradia'],
+            'cep'=>$data['cep'],
+            'rua'=>$data['rua'],
+            'bairro'=>$data['bairro'],
+            'uf'=>$data['uf'],
+            'casa'=>$data['casa'],
             'CPF'=>$data['CPF'],
             'password' => Hash::make($data['password']),
         ]);
