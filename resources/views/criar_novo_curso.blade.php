@@ -24,7 +24,7 @@
     <div class="from-group">
     
     <label for="title">Descrição:</label>
-    <textarea name="descrição" id="descrição" class="form-control" placeholder="descreva um pouco esse curso"></textarea>
+    <textarea name="descricao" id="descricao" class="form-control" placeholder="descreva um pouco esse curso"></textarea>
 
     <div class="from-group">
     

@@ -13,7 +13,7 @@ class MateriaController extends Controller
         $materia = new Materia();
         $materia->nome = $request->nome;
         $materia->conteudo = $request->conteudo;
-        $materia->descrição = $request->descrição;
+        $materia->descricao = $request->descricao;
         $materia->tempo = $request->tempo;
         $materia->save();
         return redirect('/area_da_coordenação/1');
