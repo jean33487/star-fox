@@ -22,6 +22,8 @@ use App\Http\Controllers\AlunoController;
 
 use App\Http\Controllers\ProfessorController;
 
+use App\Http\Controllers\MateriaController;
+
 /* rota da pagina inicial */
 Route::get('/', function () {
     return view('welcome');
@@ -70,6 +72,13 @@ Route::get('/coordenação', function () {
 Route::get('/area_da_coordenação/{id}', function () {
     return view('area_da_coordenação');
 });
+
+/* rota para a pagina de criar nova materia */
+Route::get('/criar_novo_curso', function () {
+    return view('criar_novo_curso');
+});
+
+Route::post('/criar_novo_curso', [MateriaController::class, 'store'] );
 
 Route::get('/dashboard', function () {
     return view('dashboard');
