@@ -13,13 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('materi', function (Blueprint $table) {
+        Schema::create('rel_user_mteri', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('professores_id')->references('id')->on('professores');
-            $table->string('nome');
-            $table->string('conteudo');
-            $table->string('descrição');
-            $table->string('tempo');
+            $table->unsignedBigInteger('materi_id')->references('id')->on('materi');
+            $table->unsignedBigInteger('user_id')->references('id')->on('users');
+            $table->string('user_nome');
+            $table->string('materi_nome');
+            $table->string('nota');
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('materi');
+        Schema::dropIfExists('rel_user_mteri');
     }
 };
