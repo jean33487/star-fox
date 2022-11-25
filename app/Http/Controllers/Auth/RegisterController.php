@@ -58,7 +58,7 @@ class RegisterController extends Controller
             'rua' =>'required',
             'bairro' =>'required',
             'uf' =>'required',
-            'casa' =>'required',
+            'cidade' =>'required',
             'CPF' =>'required',
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -82,7 +82,7 @@ class RegisterController extends Controller
             'rua'=>$data['rua'],
             'bairro'=>$data['bairro'],
             'uf'=>$data['uf'],
-            'casa'=>$data['casa'],
+            'cidade'=>$data['cidade'],
             'CPF'=>$data['CPF'],
             'password' => Hash::make($data['password']),
         ]);

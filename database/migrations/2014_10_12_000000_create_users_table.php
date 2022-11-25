@@ -24,7 +24,8 @@ return new class extends Migration
             $table->string('rua')->nullable();
             $table->string('bairro')->nullable();
             $table->string('uf')->nullable();
-            $table->string('casa')->nullable();
+            $table->string('cidade')->nullable();
+            $table->string('CPF')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
