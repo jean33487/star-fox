@@ -17,8 +17,6 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('materi_id')->references('id')->on('materi');
             $table->unsignedBigInteger('user_id')->references('id')->on('users');
-            $table->string('user_nome');
-            $table->string('materi_nome');
             $table->string('nota');
             $table->timestamps();
         });
