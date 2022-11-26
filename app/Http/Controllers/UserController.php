@@ -20,11 +20,11 @@ class UserController extends Controller
         return view('dashboards.users.settings');
     }
 
-    public function show()
+    public function show($id)
     {
-        $users = User::FindOrFFail($id);
+        $users = User::FindOrFail($id);
 
-        return view('users.show', ['user' => $user]);                                              
+        return view('events.show', ['aluno' => $users]);                                              
     }
 
 }
