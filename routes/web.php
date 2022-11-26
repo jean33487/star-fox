@@ -85,8 +85,10 @@ Route::get('/criar_novo_curso', function () {
 /* rota a logica da laravel na parte de controller */
 Route::post('/criar_novo_curso', [MateriaController::class, 'store'] );
 
-
+/* rota para a pagina de criar novo user */
 Route::get('/user/{id}', [UserController::class, 'show'] );
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
