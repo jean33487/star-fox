@@ -19,4 +19,12 @@ class UserController extends Controller
     function settings(){
         return view('dashboards.users.settings');
     }
+
+    public function show()
+    {
+        $users = User::FindOrFFail($id);
+
+        return view('users.show', ['user' => $user]);                                              
+    }
+
 }
