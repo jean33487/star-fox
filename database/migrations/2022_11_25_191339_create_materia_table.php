@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('materi', function (Blueprint $table) {
+        Schema::create('materia', function (Blueprint $table) {
             $table->id();
-            $table->string('nome');
-            $table->string('conteudo');
-            $table->string('descrição');
-            $table->string('tempo');
+            $table->string('nome')->nullable();
+            $table->string('conteudo')->nullable();
+            $table->string('descricao')->nullable();
+            $table->string('tempo')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('materi');
+        Schema::dropIfExists('materia');
     }
 };
