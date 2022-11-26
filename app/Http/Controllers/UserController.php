@@ -19,4 +19,12 @@ class UserController extends Controller
     function settings(){
         return view('dashboards.users.settings');
     }
+
+    public function show($id)
+    {
+        $users = User::FindOrFail($id);
+
+        return view('events.show', ['aluno' => $users]);                                              
+    }
+
 }
