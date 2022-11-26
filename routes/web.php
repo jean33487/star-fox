@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\UserController;
+
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -23,6 +23,8 @@ use App\Http\Controllers\AlunoController;
 use App\Http\Controllers\ProfessorController;
 
 use App\Http\Controllers\MateriaController;
+
+use App\Http\Controllers\UserController;
 
 /* rota da pagina inicial */
 Route::get('/', function () {
@@ -77,8 +79,11 @@ Route::get('/area_da_coordenação/{id}', function () {
 Route::get('/criar_novo_curso', function () {
     return view('criar_novo_curso');
 });
-
+/* rota a logica da laravel na parte de controller */
 Route::post('/criar_novo_curso', [MateriaController::class, 'store'] );
+
+
+Route::get('/user/{id}', [UserController::class, 'show'] );
 
 Route::get('/dashboard', function () {
     return view('dashboard');

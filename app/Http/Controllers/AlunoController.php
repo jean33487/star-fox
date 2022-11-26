@@ -15,6 +15,11 @@ class AlunoCoontroller extends Controller
         return view('area_do_aluno',['alunos' => $alunos]);
     }
 
+    public function show()
+    {
+        $event = Event::FindOrFFail($id);
 
+        return view('users.show', ['user' => $user]);                                              
+    }
 
 }
