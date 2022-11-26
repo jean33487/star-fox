@@ -9,4 +9,12 @@ class Materia extends Model
 {
     protected $table = 'materia';
     use HasFactory;
+
+    public function professores() {
+        return $this->belongsTo('App\models\professor');
+    }
+
+    public function users() {
+        return $this->belongsToMany('App\models\user');
+    }
 }

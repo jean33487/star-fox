@@ -7,6 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Professor extends Model
 {
-    protected $table = 'professores';
+    protected $table = 'professor';
     use HasFactory;
+
+    public function materias() {
+        return $this->belongsToMany('App\models\materia');
+    }
 }

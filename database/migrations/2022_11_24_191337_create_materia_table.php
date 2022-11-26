@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('materia', function (Blueprint $table) {
             $table->id();
             $table->string('nome')->nullable();
+            $table->unsignedBigInteger('professor_id')->references('id')->on('professor');
             $table->string('conteudo')->nullable();
             $table->string('descricao')->nullable();
             $table->string('tempo')->nullable();
