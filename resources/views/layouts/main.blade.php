@@ -13,6 +13,7 @@
         <script src="/js/scripts.js"></script> 
     </head>
         <body>
+            
             <header>
 
                 <nav class="navbar navbar-expand-lg navbar-light">
@@ -28,15 +29,7 @@
 
 
                             <li class="nav-item">
-                                <a href="/login" class="nav-link">Area do Aluno</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="/professores" class="nav-link">Area do Professor</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="/coordenação" class="nav-link">Area da Coordenação</a>
+                                <a href="/login" class="nav-link">Login</a>
                             </li>
 
                         </ul>
@@ -48,7 +41,7 @@
             @yield('content')
 
             <footer>
-                <p>Star-Fox  school &copy; 2022</p>
+                <p>Star-Fox Company &copy; 2022</p>
             </footer>
         </body>
 </html>
