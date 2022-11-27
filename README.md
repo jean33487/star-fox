@@ -49,28 +49,4 @@ Acesse o projeto
 Acesse o phpmyadmin
 [http://localhost:8081](http://localhost:8081)
 
-API de categorias e filmes:
-https://www.learn-laravel.cf/
 
-Rotas:
-- (get) /categories
-- (get) /category/{id}
-- (get) /movies
-- (get) /movie/{id}
-
-### Como realizar requisições HTTP get:
-Adicionar no arquivo web.php e acesse a rota [http://localhost:8080/requisicao](http://localhost:8080/requisicao)
-```php
-Route::get('/requisicao', function () {
-    $json = \Illuminate\Support\Facades\Http::get('https://learn-laravel.cf/movie/1')->body();
-    dd($json);
-});
-```
-Em caso de sucesso irá aparecer a mensagem (em linha única sem formatação):
-```json
-{
-    "id": 1,
-    "name": "Zack and Miri Make a Porno",
-    "category_id": 6,
-}
-```
