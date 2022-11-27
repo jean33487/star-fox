@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\User;
+
 class UserController extends Controller
 {
     function index(){
@@ -17,4 +19,7 @@ class UserController extends Controller
     function settings(){
         return view('dashboards.users.settings');
     }
+
+
+
 }

@@ -43,8 +43,9 @@ Route::group(['prefix'=>'admin', 'middleware' =>['isAdmin','auth','PreventBackHi
 
 Route::group(['prefix'=>'user', 'middleware' =>['isUser','auth','PreventBackHistory']], function(){
     Route::get('dashboard', [UserController::class,'index'])->name('user.dashboard');
-    Route::get('profile', [UserController::class, 'profile'])->name('user.profile');
+    Route::get('profile', [UserController::class, 'profile'])->name('user.profile');//rota para o perfil do usuario para passaar dados do banco para a blade restrita dele 
     Route::get('settings', [UserController::class, 'settings'])->name('user.settings');
+    
 });
 
 Route::group(['prefix'=>'professor', 'middleware' =>['isProfessor','auth','PreventBackHistory']], function(){
@@ -90,8 +91,8 @@ Route::get('/criar_novo_curso', function () {
 /* rota a logica da laravel na parte de controller */
 Route::post('/criar_novo_curso', [MateriaController::class, 'store'] );
 
-
 Route::get('/user/{id}', [UserController::class, 'show'] );
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
