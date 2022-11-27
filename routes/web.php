@@ -39,6 +39,9 @@ Route::group(['prefix'=>'admin', 'middleware' =>['isAdmin','auth','PreventBackHi
     Route::get('dashboard', [AdminController::class,'index'])->name('admin.dashboard');
     Route::get('profile', [AdminController::class, 'profile'])->name('admin.profile');
     Route::get('settings', [AdminController::class, 'settings'])->name('admin.settings');
+
+
+    Route::post('update-profile-info',[AdminController::class,'updateInfo'])->name('adminUpdateInfo');
 });
 
 Route::group(['prefix'=>'user', 'middleware' =>['isUser','auth','PreventBackHistory']], function(){
