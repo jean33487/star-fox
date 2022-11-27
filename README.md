@@ -44,7 +44,7 @@ php artisan key:generate
 
 Atualiza as migrations antes de acessar o site
 ```sh
-php artisan migrate: fresh
+php artisan migrate:fresh
 ```
 
 
