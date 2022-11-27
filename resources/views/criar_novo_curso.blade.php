@@ -39,4 +39,4 @@
 
 </div>
 
-<a href="/coordenação" class="button">VOLTA</a>
+<a href="/login" class="button">VOLTA</a>

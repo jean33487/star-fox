@@ -20,6 +20,15 @@ class UserController extends Controller
         return view('dashboards.users.settings');
     }
 
+    function update(Request $request){
+        
+        User::findOrFail($request->id)->update($request->all());
+
+        
+
+        return view('login');
+    }
+
 
 
 }

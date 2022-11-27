@@ -39,6 +39,8 @@ Route::group(['prefix'=>'admin', 'middleware' =>['isAdmin','auth','PreventBackHi
     Route::get('dashboard', [AdminController::class,'index'])->name('admin.dashboard');
     Route::get('profile', [AdminController::class, 'profile'])->name('admin.profile');
     Route::get('settings', [AdminController::class, 'settings'])->name('admin.settings');
+    Route::get('criarcurso', [AdminController::class, 'criarcurso'])->name('criar_novo_curso');
+    Route::get('update', [AdminController::class, 'update'])->name('update');
 
 
     Route::post('update-profile-info',[AdminController::class,'updateInfo'])->name('adminUpdateInfo');
@@ -63,6 +65,10 @@ Route::group(['prefix'=>'professor', 'middleware' =>['isProfessor','auth','Preve
 /* rota da pagina de login do aluno */
 Route::get('/alunos', function () {
     return view('alunos');
+});
+
+Route::get('/register', function () {
+    return view('register');
 });
 
 /* rota da pagina logada do aluno */

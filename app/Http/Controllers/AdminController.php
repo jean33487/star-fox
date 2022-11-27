@@ -1,17 +1,19 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-use Auth;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 
 class AdminController extends Controller
 {
-    function index(){
+        function index(){
         
         return view('dashboards.admins.index');
+        return view('criar_novo_curso');   
         }
+
     
         function profile(){
             return view('dashboards.admins.profile');
@@ -20,10 +22,11 @@ class AdminController extends Controller
             return view('dashboards.admins.settings');
         }
 
+
         function updateInfo(Request $request){
-            $validator = \Validator::make($request->all(),[
+            $validator = Validator::make($request->all(),[
                 'name'=>'required',
-                'email'=>'required|email|unique:users,email,'.Auth::user()->id,
+                'email'=> 'required|email|unique:users,email,'.Auth::user()->id,
                 'UsuarioOficial'=>'required',
                 'FilmeFavorito'=>'required',
                 'cep'=>'required',

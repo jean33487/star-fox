@@ -25,6 +25,21 @@
                             <label>Estado:
                             <input name="uf" type="text" id="uf" size="2" /></label><br />
 
+                            <p>1=Coordenacao 2=Aluno 3=Professor</p>
+                        <div class="row mb-3">
+                            <label for="role" class="col-md-4 col-form-label text-md-end">{{ __('Cargo') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="role" type="role" class="form-control @error('role') is-invalid @enderror" name="role" value="{{ old('role') }}" required autocomplete="role">
+
+                                @error('role')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
                         <div class="row mb-3">
                             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Nome Completo') }}</label>
 

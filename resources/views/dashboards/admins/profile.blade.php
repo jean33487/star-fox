@@ -74,7 +74,7 @@
                         <div class="col-sm-10">
                           <input type="text" class="form-control" id="inputEmail" placeholder="Email" value="{{ Auth::user()
                           ->email }}"name="email">
-                          <span class="text-danger error-text email_error "></span>
+                          <span class="text-danger error-text email_error"></span>
                         </div>
                       </div>
                       <div class="form-group row">
@@ -150,11 +150,11 @@
                   </div>
                   <!-- /.tab-pane -->
                   <div class="tab-pane" id="change_password">
-                    <form class="form-horizontal">
+                    <form class="form-horizontal" action="update" method="POST" enctype="multipart/form-data">
                       <div class="form-group row">
                         <label for="inputName" class="col-sm-2 col-form-label">Senha Antiga</label>
                         <div class="col-sm-10">
-                          <input type="email" class="form-control" id="inputName" placeholder="Digite a senha atual">
+                          <input type="text" class="form-control" id="inputName" placeholder="Digite a senha atual">
                         </div>
                       </div>
                       <div class="form-group row">
@@ -171,7 +171,7 @@
                       </div>
                       <div class="form-group row">
                         <div class="offset-sm-2 col-sm-10">
-                          <button type="submit" class="btn btn-danger">Atualizar Senha</button>
+                          <button type="submit" class="btn btn-danger" valeu="update" >Atualizar Senha</button>
                         </div>
                       </div>
                     </form>

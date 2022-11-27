@@ -3,6 +3,6 @@
 
 @section('content')
 
-here-------
-
+<a href="/register" class="button">Cadastrar Alunos</a>
+<a href="/criar_novo_curso" class="button">Novo Usuario</a>
 @endsection
