@@ -18,4 +18,12 @@ class MateriaController extends Controller
         $materia->save();
         return redirect('/area_da_coordenação/1');
     }
+
+    public function joinMateria($id) {
+
+        $user = auth()->user();
+
+
+    }
+
 }
