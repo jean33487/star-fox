@@ -1,26 +1,19 @@
-@extends('layouts.app')
+@extends('layouts.main')
+ 
+@section('title', $aluno->name)
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-                <h4>Olá Aluno/a: {{ Auth::user()->name }}</h4>
-                <hr>
-                DASHBOARD
+    
+<p>Nome: {{ $aluno->name }}</p>
+<p>Filme: {{ $aluno->FilmeFavorito }}</p>
+<p>Senha: {{ $aluno->senha }}</p>
+<p>Email: {{ $aluno->email }}</p>
+<p>CPF: {{ $aluno->CPF }}</p> 
+<p>CEP: {{ $aluno->cep }}</p> 
+<p>Rua: {{ $aluno->rua }}</p> 
+<p>Bairro: {{ $aluno->bairro }}</p> 
+<p>Cidade: {{ $aluno->cidade}}</p> 
+<p>Estado: {{ $aluno->uf }}</p> 
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
 
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 @endsection

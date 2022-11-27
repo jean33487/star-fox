@@ -6,8 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Hash;
 
 use Illuminate\Http\Request;
 
@@ -77,18 +77,18 @@ class RegisterController extends Controller
     //    return User::create([
     //        'name' => $data['name'],
     //        'email' => $data['email'],
-    //        'role'=>2,
-    //         'UsuarioOficial'=>$data['UsuarioOficial'],
-    //         'FilmeFavorito'=>$data['FilmeFavorito'],
-    //         'cep'=>$data['cep'],
-    //         'rua'=>$data['rua'],
-    //         'bairro'=>$data['bairro'],
-    //         'uf'=>$data['uf'],
-    //         'cidade'=>$data['cidade'],
-    //         'CPF'=>$data['CPF'],
-    //         'password' => Hash::make($data['password']),
+    //        'role'=>2,   /* aqui ele coloca 2 como usuario (aluno) default*/
+    //        'UsuarioOficial'=>$data['UsuarioOficial'],
+    //        'FilmeFavorito'=>$data['FilmeFavorito'],
+    //        'cep'=>$data['cep'],
+    //        'rua'=>$data['rua'],
+    //        'bairro'=>$data['bairro'],
+    //        'uf'=>$data['uf'],
+    //        'cidade'=>$data['cidade'],
+    //        'CPF'=>$data['CPF'],
+    //        'password' => Hash::make($data['password']),
     //    ]);
-    // }
+    //}
 
     function register(Request $request){
 
@@ -110,7 +110,7 @@ class RegisterController extends Controller
         $user = new User();
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->role = $request->role;
+        $user->role = 2;
         $user->UsuarioOficial = $request->UsuarioOficial;
         $user->FilmeFavorito = $request->FilmeFavorito;
         $user->cep = $request->cep;
@@ -119,7 +119,7 @@ class RegisterController extends Controller
         $user->uf = $request->uf;
         $user->cidade = $request->cidade;
         $user->CPF = $request->CPF;
-        $user->password = $request->password;
+        $user->password = Hash::make($request->password);
 
         if( $user->save() ){
 

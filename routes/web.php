@@ -3,7 +3,10 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AdminController;
-
+use App\Http\Controllers\ProfessorController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\AlunoController;
+use App\Http\Controllers\MateriaController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -18,13 +21,9 @@ use Illuminate\Support\Facades\Auth;
 */
 /*iniciando o use dos controllers*/
 
-use App\Http\Controllers\AlunoController;
 
-use App\Http\Controllers\ProfessorController;
 
-use App\Http\Controllers\MateriaController;
 
-use App\Http\Controllers\UserController;
 
 /* rota da pagina inicial */
 Route::get('/', function () {
@@ -46,6 +45,12 @@ Route::group(['prefix'=>'user', 'middleware' =>['isUser','auth','PreventBackHist
     Route::get('dashboard', [UserController::class,'index'])->name('user.dashboard');
     Route::get('profile', [UserController::class, 'profile'])->name('user.profile');
     Route::get('settings', [UserController::class, 'settings'])->name('user.settings');
+});
+
+Route::group(['prefix'=>'professor', 'middleware' =>['isProfessor','auth','PreventBackHistory']], function(){
+    Route::get('dashboard', [ProfessorController::class,'index'])->name('professor.dashboard');
+    Route::get('profile', [ProfessorController::class, 'profile'])->name('professor.profile');
+    Route::get('settings', [ProfessorController::class, 'settings'])->name('professor.settings');
 });
 
 

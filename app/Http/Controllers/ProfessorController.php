@@ -4,14 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Models\Professor;
-
 class ProfessorController extends Controller
 {
-    public function index()
-    {
-        $professores = Professor::all();
-
-        return view('area_do_professor',['professores' => $professores]);
-    }
+    function index(){
+        
+        return view('dashboards.professors.index');
+        }
+    
+        function profile(){
+            return view('dashboards.professors.profile');
+        }
+        function settings(){
+            return view('dashboards.professors.settings');
+        }
 }
