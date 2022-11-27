@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ProfessorController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -19,11 +21,7 @@ use Illuminate\Support\Facades\Auth;
 
 use App\Http\Controllers\AlunoController;
 
-use App\Http\Controllers\ProfessorController;
-
 use App\Http\Controllers\MateriaController;
-
-use App\Http\Controllers\UserController;
 
 /* rota da pagina inicial */
 Route::get('/', function () {
@@ -93,14 +91,12 @@ Route::get('/criar_novo_curso', function () {
 /* rota a logica da laravel na parte de controller */
 Route::post('/criar_novo_curso', [MateriaController::class, 'store'] );
 
-<<<<<<< Updated upstream
+
 /* rota para a pagina de criar novo user */
 Route::get('/user/{id}', [UserController::class, 'show'] );
 
 
 
-=======
-<<<<<<< HEAD
 Route::post('/cadastro_professores', [ProfessorController::class, 'store'] );
 Route::get('/cadastro_professores', function () {
     return view('cadastro_professores');
@@ -110,14 +106,13 @@ Route::get('/user/{id}', [UserController::class, 'show'] );
 
 /* rota logica para o aluno se inscrever numa materia */
 Route::post('/materia/join{id}', [MateriaController::class, 'joinMateria'] );
-=======
+
 /* rota para a pagina de criar novo user */
 Route::get('/user/{id}', [UserController::class, 'show'] );
 
 
->>>>>>> 243c7d8bc4b68086dedd1f7f514ea0c2841952a9
 
->>>>>>> Stashed changes
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

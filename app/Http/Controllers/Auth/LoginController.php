@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use Illuminate\Foundation\Auth\AuthenticatesProfessor;
 
 use Illuminate\Http\Request;
 
@@ -31,10 +30,10 @@ class LoginController extends Controller
      */
     protected $redirectTo = RouteServiceProvider::HOME;
       protected function redirectTo(){
-        if(Auth()->user()->role == 1){
+        if(Auth()->user()->role == 2){
             return route ('admin.dashboard');
         }
-        elseif (Auth()->user() == 2){
+        elseif (Auth()->user() == 1){
             return route ('user.dashboard');
         }
         
@@ -64,10 +63,10 @@ class LoginController extends Controller
 
         if (auth()->attempt(array('email' => $input['email'], 'password' => $input['password']))){
             
-        if(auth()->user()->role == 1){
+        if(auth()->user()->role == 2){
             return redirect()->route('admin.dashboard');
         }
-        elseif(auth()->user()->role == 2){
+        elseif(auth()->user()->role == 1){
             return redirect()->route('user.dashboard');
         }
         elseif(auth()->user()->role ==3){
