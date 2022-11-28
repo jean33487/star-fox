@@ -55,6 +55,6 @@ Acesse o phpmyadmin
 [http://localhost:8081](http://localhost:8081)
 
 ## Autores
-Nome:Giovani Bellini dos Santos RA:22007263
+Giovani Bellini dos Santos Ra 22007263
 
 
