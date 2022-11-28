@@ -52,6 +52,9 @@ Acesse o phpmyadmin
 API de categorias e filmes:
 https://www.learn-laravel.cf/
 
+API de categorias e filmes:
+https://www.learn-laravel.cf/
+
 Rotas:
 - (get) /categories
 - (get) /category/{id}
@@ -79,3 +82,6 @@ Em caso de sucesso irá aparecer a mensagem (em linha única sem formatação):
 
 - Criação login sem node: [https://youtu.be/V2s2toQNMG0](https://youtu.be/V2s2toQNMG0)
 - Criação login com node: [https://youtu.be/UhOYeYoK3Bc](https://youtu.be/UhOYeYoK3Bc)
+=======
+## Autores
+Nome:Giovani Bellini dos Santos RA:22007263
