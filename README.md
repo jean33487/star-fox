@@ -55,8 +55,12 @@ Acesse o phpmyadmin
 [http://localhost:8081](http://localhost:8081)
 
 ## Autores
-Nome:Giovani Bellini dos Santos RA:22007263
+Nome: Giovani Bellini dos Santos  RA: 22007263
 
-Nome:Matheus Zanon Caritá RA:22014203
+Nome: Matheus Zanon Caritá  RA: 22014203
+
+Nome: Jean Okabe Rezende Piton RA: 22013310 
+
+Nome: Victor de Melo Roston RA: 22006737
 
 
