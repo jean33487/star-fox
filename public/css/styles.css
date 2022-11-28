@@ -1,0 +1,16 @@
+*{
+    font-family: 'Roboto';
+}
+
+#navbar{
+    background-color: #000706;
+    color: rgb(255, 255, 255);
+}
+#navbar img {
+    width: 80px;
+
+}
+
+#navbar a{
+    color: rgb(255, 255, 255);
+}

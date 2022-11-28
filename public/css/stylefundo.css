@@ -1,0 +1,23 @@
+*{
+    font-family: 'Roboto';
+}
+
+#navbar{
+    background-color: #000706;
+    color: #fff;
+}
+
+#navbar a{
+    color: rgb(255, 255, 255);
+}
+
+body{
+    margin: 30;
+}
+
+#container {
+    width: 100vw; /*view width */
+    height: 100vh; /*view height */
+    background: url('../img/bg-new.jpg');
+    background-size: cover;
+}
