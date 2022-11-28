@@ -1,5 +1,5 @@
 @extends('dashboards.professors.layouts.professor-dash-layout')
-@section('title','Dashboard')
+@section('title','Menu')
 
 @section('content')
 

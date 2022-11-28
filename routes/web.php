@@ -40,7 +40,7 @@ Route::group(['prefix'=>'admin', 'middleware' =>['isAdmin','auth','PreventBackHi
     Route::get('profile', [AdminController::class, 'profile'])->name('admin.profile');
     Route::get('settings', [AdminController::class, 'settings'])->name('admin.settings');
     Route::get('criarcurso', [AdminController::class, 'criarcurso'])->name('criar_novo_curso');
-    Route::get('update', [AdminController::class, 'update'])->name('update');
+    Route::get('update', [AdminController::class, 'update'])->name('login');
 
 
     Route::post('update-profile-info',[AdminController::class,'updateInfo'])->name('adminUpdateInfo');
@@ -50,6 +50,9 @@ Route::group(['prefix'=>'user', 'middleware' =>['isUser','auth','PreventBackHist
     Route::get('dashboard', [UserController::class,'index'])->name('user.dashboard');
     Route::get('profile', [UserController::class, 'profile'])->name('user.profile');//rota para o perfil do usuario para passaar dados do banco para a blade restrita dele 
     Route::get('settings', [UserController::class, 'settings'])->name('user.settings');
+    Route::get('update', [UserController::class, 'update'])->name('login');
+
+    Route::post('update-profile-info',[UserController::class,'updateInfo'])->name('userUpdateInfo');
     
 });
 
@@ -57,9 +60,10 @@ Route::group(['prefix'=>'professor', 'middleware' =>['isProfessor','auth','Preve
     Route::get('dashboard', [ProfessorController::class,'index'])->name('professor.dashboard');
     Route::get('profile', [ProfessorController::class, 'profile'])->name('professor.profile');
     Route::get('settings', [ProfessorController::class, 'settings'])->name('professor.settings');
+    Route::get('criarcurso', [ProfessorController::class, 'criarcurso'])->name('criar_novo_curso');
+
+    Route::post('update-profile-info',[ProfessorController::class,'updateInfo'])->name('professorUpdateInfo');
 });
-
-
 
 
 /* rota da pagina de login do aluno */

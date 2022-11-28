@@ -7,6 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>@yield('title')</title>
   <base href="{{ \URL::to('/') }}">
 
@@ -93,6 +94,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <p>
                 Settings
               </p>
+
+              
             </a>
           </li>
         </ul>
@@ -125,7 +128,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       Anything you want
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+    
   </footer>
 </div>
 <!-- ./wrapper -->
@@ -138,5 +141,47 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.min.js"></script>
+
+{{-- CUSTOM JS CODES --}}
+<script>
+
+  $.ajaxSetup({
+    headers:{
+      'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content')
+    }
+  });
+
+  $(function(){
+    /* UPDATE ADMIN PERSONAL INFO */
+    $('#ProfessorInfoForm').on('submit', function(e){
+        e.preventDefault();
+        $.ajax({
+           url:$(this).attr('action'),
+           method:$(this).attr('method'),
+           data:new FormData(this),
+           processData:false,
+           dataType:'json',
+           contentType:false,
+           beforeSend:function(){
+               $(document).find('span.error-text').text('');
+           },
+           success:function(data){
+                if(data.status == 0){
+                  $.each(data.error, function(prefix, val){
+                    $('span.'+prefix+'_error').text(val[0]);
+                  });
+                }else{
+                  $('.professor_name').each(function(){
+                     $(this).html( $('#ProfessorInfoForm').find( $('input[name="name"]') ).val() );
+                  });
+                  alert(data.msg);
+                }
+           }
+        });
+    });
+   
+});
+
+</script>
 </body>
 </html>

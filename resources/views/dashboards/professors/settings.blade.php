@@ -1,8 +1,7 @@
 @extends('dashboards.professors.layouts.professor-dash-layout')
-@section('title','Settings')
+@section('title','Matérias')
 
 @section('content')
 
-here-------
-
+<a href="/criar_novo_curso" class="button">Criar Matéria</a>
 @endsection
