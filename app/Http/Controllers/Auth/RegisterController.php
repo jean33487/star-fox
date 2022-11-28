@@ -111,7 +111,7 @@ class RegisterController extends Controller
         $user = new User();
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->role = 2;
+        $user->$request->role;;
         $user->UsuarioOficial = $request->UsuarioOficial;
         $user->FilmeFavorito = $request->FilmeFavorito;
         $user->cep = $request->cep;

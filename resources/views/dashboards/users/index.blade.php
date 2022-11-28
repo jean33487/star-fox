@@ -3,6 +3,6 @@
 
 @section('content')
 
-here-------
+Bem vindo!
 
 @endsection

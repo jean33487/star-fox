@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 use App\Models\User;
-
+use Illuminate\Support\Facades\Validator;
 class AdminController extends Controller
 {
     function index(){
@@ -21,7 +21,7 @@ class AdminController extends Controller
         }
 
         function updateInfo(Request $request){
-            $validator = \Validator::make($request->all(),[
+            $validator = Validator::make($request->all(),[
                 'name'=>'required',
                 'email'=>'required|email|unique:users,email,'.Auth::user()->id,
                 'UsuarioOficial'=>'required',

@@ -83,7 +83,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <a href="{{ route('professor.profile') }}" class="nav-link {{ (request()->is('professor/profile*')) ? 'active' : '' }}">
                   <i class="nav-icon fas fa-user"></i>
                   <p>
-                    Profile
+                    Perfil
                   </p>
                 </a>
               </li>
@@ -91,7 +91,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <a href="{{ route('professor.settings') }}" class="nav-link {{ (request()->is('professor/settings*')) ? 'active' : '' }}">
               <i class="nav-icon fas fa-cog"></i>
               <p>
-                Settings
+                Configurações
               </p>
             </a>
           </li>
