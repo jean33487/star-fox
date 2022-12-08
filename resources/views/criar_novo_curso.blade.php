@@ -16,6 +16,13 @@
 
     <div class="from-group">
     
+        <label for="title">Professor:</label>
+        <input type="text" class="form-control" id="nome" name="nome" placeholder="professor">
+
+</div>
+
+    <div class="from-group">
+    
         <label for="title">Conteudo:</label>
         <input type="text" class="form-control" id="conteudo " name="conteudo" placeholder="Conteudo do Curso">
 

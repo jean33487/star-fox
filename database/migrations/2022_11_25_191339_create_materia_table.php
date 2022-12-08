@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('conteudo')->nullable();
             $table->string('descricao')->nullable();
             $table->string('tempo')->nullable();
+            $table->string('professor')->nullable();
             $table->timestamps();
         });
     }

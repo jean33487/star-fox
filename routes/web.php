@@ -91,10 +91,20 @@ Route::get('/area_da_coordenação/{id}', function () {
 Route::get('/criar_novo_curso', function () {
     return view('criar_novo_curso');
 });
+
+/* rota para a pagina de entrar numa materia */
+Route::get('/showmaterias', function () {
+    return view('showmaterias');
+});
+
 /* rota a logica da laravel na parte de controller */
 Route::post('/criar_novo_curso', [MateriaController::class, 'store'] );
 
 Route::get('/user/{id}', [UserController::class, 'show'] );
+
+Route::post('/materias/join/{id}', [MateriaController::class, 'join'] );
+
+Route::post('/showmaterias', [MateriaController::class, 'index'] );
 
 
 Route::get('/dashboard', function () {

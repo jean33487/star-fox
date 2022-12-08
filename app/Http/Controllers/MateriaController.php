@@ -15,7 +15,22 @@ class MateriaController extends Controller
         $materia->conteudo = $request->conteudo;
         $materia->descricao = $request->descricao;
         $materia->tempo = $request->tempo;
+        $materia->professor= $request->professor;
         $materia->save();
-        return redirect('/area_da_coordenação/1');
+        return redirect('/register');
     }
+
+    public function joinMateria($id)
+    {
+        $user = auth()->user();
+        $user->materias()->attach($id);
+        $materias = Materia::findOrFail($id);
+        return redirect('/dashboard/'.$user->id)->with('msg', 'Você entrou no curso: '.$materias->nome);
+    }
+
+    public function index(){
+        $materias = Materia::all();
+        return view('showmaterias',['materias'=>$materias]);
+    }
+
 }
