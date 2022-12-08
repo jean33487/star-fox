@@ -9,4 +9,9 @@ class Materia extends Model
 {
     protected $table = 'materia';
     use HasFactory;
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class, 'materia_user', 'materia_id', 'user_id');
+    }
 }

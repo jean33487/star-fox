@@ -62,4 +62,9 @@ class User extends Authenticatable
 
     protected $table = 'users';
     use HasFactory;
+
+    public function materias()
+    {
+        return $this->belongsToMany(Materia::class, 'materia_user', 'user_id', 'materia_id');
+    }
 }
