@@ -25,7 +25,7 @@ class MateriaController extends Controller
         $user = auth()->user();
         $user->materiasAsParticipant()->attach($id);
         $materias = Materia::findOrFail($id);
-        return redirect('/dashboard/'.$user->id)->with('msg', 'Você entrou no curso: '.$materias->nome);
+        return redirect('/login')->with('msg', 'Você entrou no curso: '.$materias->nome);
     }
 
     public function index(){

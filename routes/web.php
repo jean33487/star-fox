@@ -106,6 +106,7 @@ Route::get('/materias/join/{id}', [MateriaController::class, 'joinMateria'] );
 
 Route::get('/showmaterias', [MateriaController::class, 'index'] );
 
+Route::get('/dashborad', [UserController::class, 'settings'] );
 
 Route::get('/dashboard', function () {
     return view('dashboard');

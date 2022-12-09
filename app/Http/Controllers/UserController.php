@@ -16,8 +16,11 @@ class UserController extends Controller
     function profile(){
         return view('dashboards.users.profile');
     }
+    
     function settings(){
-        return view('dashboards.users.settings');
+        $user = auth()->user();
+
+        return view('dashboards.users.settings', ['user'=>$user]);
     }
 
 

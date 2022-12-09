@@ -25,5 +25,8 @@
         </form>
         @endforeach
     </div>
+    <form action="/register">
+    <button type='submit'>voltar</button>
+    </form>
 
 </div>
