@@ -10,18 +10,19 @@
                 <p class="card-text">{{$materia->conteudo}}</p>
                 <p class="card-text">{{$materia->descricao}}</p>
                 <p class="card-text">{{$materia->tempo}}</p>
-                <form action="/materias/join/{{ $materia->id }}" method="POST">
-                    @csrf
-                    <a href="/materias/join/{{ $materia->id }}" 
-                        class="btn btn-primary"
-                        id="materia-submit"
-                        onclick="materia.preventDefault();
-                        this.closed('form').submit();">
-                        Inscrever-se
-                    </a>
-                </form>
+
             </div>
         </div>
+        <form action="/materias/join/{{ $materia->id }}" method="POST">
+            @csrf
+            <a href="/materias/join/{{ $materia->id }}" 
+                class="btn btn-primary"
+                id="materias-submit"
+                onclick="materia.preventDefault();
+                this.closed('form').submit();">
+                Inscrever-se
+            </a>
+        </form>
         @endforeach
     </div>
 

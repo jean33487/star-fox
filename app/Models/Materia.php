@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
 class Materia extends Model
 {
     protected $table = 'materia';
@@ -12,6 +13,6 @@ class Materia extends Model
 
     public function users()
     {
-        return $this->belongsToMany(User::class, 'materia_user', 'materia_id', 'user_id');
+        return $this->belongsToMany('App\Models\User');
     }
 }

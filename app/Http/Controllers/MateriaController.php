@@ -23,7 +23,7 @@ class MateriaController extends Controller
     public function joinMateria($id)
     {
         $user = auth()->user();
-        $user->materias()->attach($id);
+        $user->materiasAsParticipant()->attach($id);
         $materias = Materia::findOrFail($id);
         return redirect('/dashboard/'.$user->id)->with('msg', 'Você entrou no curso: '.$materias->nome);
     }

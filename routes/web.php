@@ -5,10 +5,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProfessorController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\AlunoController;
-use App\Http\Controllers\MateriaController;
-use Illuminate\Support\Facades\Auth;
 
+use Illuminate\Support\Facades\Auth;
+use App\Models\Materia;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,7 +21,7 @@ use Illuminate\Support\Facades\Auth;
 /*iniciando o use dos controllers*/
 
 
-
+use App\Http\Controllers\MateriaController;
 
 
 /* rota da pagina inicial */
@@ -94,6 +93,7 @@ Route::get('/criar_novo_curso', function () {
 
 /* rota para a pagina de entrar numa materia */
 Route::get('/showmaterias', function () {
+    
     return view('showmaterias');
 });
 
@@ -102,9 +102,9 @@ Route::post('/criar_novo_curso', [MateriaController::class, 'store'] );
 
 Route::get('/user/{id}', [UserController::class, 'show'] );
 
-Route::post('/materias/join/{id}', [MateriaController::class, 'join'] );
+Route::get('/materias/join/{id}', [MateriaController::class, 'joinMateria'] );
 
-Route::post('/showmaterias', [MateriaController::class, 'index'] );
+Route::get('/showmaterias', [MateriaController::class, 'index'] );
 
 
 Route::get('/dashboard', function () {
