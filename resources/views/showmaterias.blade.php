@@ -1,6 +1,6 @@
 <div id="materias-conteiner" class="col-md-12">
     <h2>Curso</h2>
-    <p>pode esclhor e se inscrever em um curso</p>
+    <p>pode escolher e se inscrever em um curso</p>
     <div id="card-conteiner" class="row">
         @foreach($materias as $materia)
         <div class="card" style="width: 18rem;">
