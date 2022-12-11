@@ -5,7 +5,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProfessorController;
 use App\Http\Controllers\UserController;
-
 use Illuminate\Support\Facades\Auth;
 use App\Models\Materia;
 /*
@@ -22,6 +21,8 @@ use App\Models\Materia;
 
 
 use App\Http\Controllers\MateriaController;
+use App\Http\Controllers\Auth\RegisterController;
+
 
 
 /* rota da pagina inicial */
@@ -106,6 +107,8 @@ Route::get('/edituser', function () {
 
 /* rota a logica da laravel na parte de controller */
 Route::post('/criar_novo_curso', [MateriaController::class, 'store'] );
+
+Route::post('/dashboard',[RegisterController::class, 'register']);
 
 Route::get('/user/{id}', [UserController::class, 'show'] );
 

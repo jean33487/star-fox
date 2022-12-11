@@ -129,7 +129,5 @@ class RegisterController extends Controller
             return redirect()->back()->with('error','Falha ao realizar o cadastro');
         }
     }
-
-
-
+    
 }
