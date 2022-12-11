@@ -93,8 +93,15 @@ Route::get('/criar_novo_curso', function () {
 
 /* rota para a pagina de entrar numa materia */
 Route::get('/showmaterias', function () {
-    
     return view('showmaterias');
+});
+
+Route::get('/register', function () {
+    return view('register');
+});
+
+Route::get('/edituser', function () {
+    return view('edituser');
 });
 
 /* rota a logica da laravel na parte de controller */
@@ -102,11 +109,15 @@ Route::post('/criar_novo_curso', [MateriaController::class, 'store'] );
 
 Route::get('/user/{id}', [UserController::class, 'show'] );
 
+
+Route::get('/user/{id}', [UserController::class, 'edit'] );
+
 Route::get('/materias/join/{id}', [MateriaController::class, 'joinMateria'] );
 
 Route::get('/showmaterias', [MateriaController::class, 'index'] );
 
 Route::get('/dashborad', [UserController::class, 'settings'] );
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

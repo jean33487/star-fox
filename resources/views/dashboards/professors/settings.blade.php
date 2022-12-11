@@ -3,6 +3,9 @@
 
 @section('content')
 
-here-------
+<form action="/showmaterias">
+    <button type="submit">Veja materias</button>
+   </form>
+
 
 @endsection

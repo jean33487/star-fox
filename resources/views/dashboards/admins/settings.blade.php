@@ -3,6 +3,10 @@
 
 @section('content')
 
-<a href="/register" class="btn btn-primary btn-block"><b>Cadastrar Alunos</b></a>
-<a href="/criar_novo_curso" class="btn btn-primary btn-block"><b>Criar Matérias</b></a>
+<form action="/register">
+    <button type="submit">Registrar Users</button>
+   </form>
+   <form action="/criar_novo_curso">
+    <button type="submit">Criar Curso</button>
+   </form>
 @endsection
