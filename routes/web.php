@@ -121,7 +121,6 @@ Route::get('/showmaterias', [MateriaController::class, 'index'] );
 
 Route::get('/dashborad', [UserController::class, 'settings'] );
 
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

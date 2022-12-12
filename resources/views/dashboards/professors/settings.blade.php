@@ -7,5 +7,4 @@
     <button type="submit">Veja materias</button>
    </form>
 
-
 @endsection

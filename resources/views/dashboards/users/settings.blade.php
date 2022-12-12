@@ -15,6 +15,7 @@
                 <p class="card-text">{{$materiasusuario->conteudo}}</p>
                 <p class="card-text">{{$materiasusuario->descricao}}</p>
                 <p class="card-text">{{$materiasusuario->tempo}}</p>
+                
             </div>
         </div>
     @endforeach
